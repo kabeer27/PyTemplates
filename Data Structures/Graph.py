@@ -1,5 +1,5 @@
 ## Implementation of Graph with edge addition
-import deque
+from collections import deque
 class Graph:
     def __init__(self,n):
         self.neighbours={}

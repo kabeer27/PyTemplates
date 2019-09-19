@@ -1,8 +1,10 @@
-## Implementation of Graph with edge addition
+##Follows 1 based indexing for nodes, supports directed and undirected graphs, topological sort for directed graphs added
+
 from collections import deque
 class Graph:
     def __init__(self,n):
         self.neighbours={}
+        self.n=n
         for i in range(1,n+1):
             self.neighbours[i]=[]
     
@@ -40,4 +42,25 @@ class Graph:
                     visited[v-1]=1
                     stack.append(v)
         return visited
-        
+    
+    def topologicalSort(self):
+        Order=[]
+        visited=[0]*self.n
+        in_degree=[0]*self.n
+        for u in range(1,n+1):
+            for v in self.neighbours[u]:
+                in_degree[v-1]+=1
+        q=deque()
+        for u in range(n):
+            if in_degree[u]==0:
+                q.append(u+1)
+                visited[u]=1
+        while q:
+            u=q.popleft()
+            Order.append(u)
+            for v in self.neighbours[u]:
+                in_degree[v-1]-=1
+                if in_degree[v-1]==0:
+                    q.append(v)
+                    visited[v-1]=1
+        return Order

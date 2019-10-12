@@ -10,7 +10,7 @@ class WeightedGraph:
         for i in range(0,n):
             self.neighbours[i]=[]
     
-    def addEdge(self,u,v,weight):
+    def add_edge(self,u,v,weight):
         self.neighbours[u].append((v,weight))
         self.neighbours[v].append((u,weight))
     

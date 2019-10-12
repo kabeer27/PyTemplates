@@ -1,4 +1,4 @@
-def generatePrimes(n):
+def generate_primes(n):
     ##Count number of prime factors of numbers from 2 - N , 1 is not counted as a prime number.
     prime_factor_count=[0]*(n+1)
     for i in range(2,n+1):

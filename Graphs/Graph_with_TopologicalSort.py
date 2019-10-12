@@ -8,10 +8,10 @@ class Graph:
         for i in range(1,n+1):
             self.neighbours[i]=[]
     
-    def addDirectedEdge(self,u,v):
+    def add_directed_edge(self,u,v):
         self.neighbours[u].append(v)
     
-    def addEdge(self,u,v):
+    def add_edge(self,u,v):
         self.neighbours[u].append(v)
         self.neighbours[v].append(u)
 

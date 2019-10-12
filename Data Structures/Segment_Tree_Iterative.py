@@ -11,7 +11,7 @@ class SegmentTree:
         for i in range(self.m+n,0,-1):
             self.val[i>>1]=min(self.val[i>>1],self.val[i])
     
-    def GetMin(self,l,r):
+    def get_min(self,l,r):
         l+=self.m
         r+=self.m
         min_element=self.pad

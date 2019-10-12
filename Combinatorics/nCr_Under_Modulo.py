@@ -2,7 +2,7 @@
 mod=10**9+7
 factorial=[1]
 
-def preCalculate(n):
+def pre_calculate(n):
     for i in range(1,n+1):
         factorial.append(factorial[-1]*i%mod)
 

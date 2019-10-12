@@ -5,7 +5,7 @@ def update(fenwick, idx, val, n):
         fenwick[idx]+=val
         idx+=(idx & (-idx))
 
-def getSum(fenwick, idx):
+def get_sum(fenwick, idx):
     sum=0
     while idx>0:
         sum+=fenwick[idx]

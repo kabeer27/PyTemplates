@@ -1,4 +1,4 @@
-def generatePrimes(n):
+def generate_primes(n):
     primes=[True for i in range(n+1)]
     for p in range(2,n+1):
         if p*p<=n and primes[p]:

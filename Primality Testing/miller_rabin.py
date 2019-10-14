@@ -16,7 +16,7 @@ def miller_rabin(p):
         x=pow(a,n,p)
         if x==1 or x==p-1:
             continue
-        
+        flag=0
         for i in range(r-1):
             x=(x*x)%p
             if x==1:

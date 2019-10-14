@@ -2,7 +2,9 @@ from random import randint as rand
 
 ##Miller rabin, increase iterations to improve accuracy
 def miller_rabin(p):
-    if p<2 or p%2==0:
+    if p==2 or p==3:
+        return True
+    if p==1 or p%2==0:
         return False
     n=p-1
     r=0

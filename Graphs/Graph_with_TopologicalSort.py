@@ -15,7 +15,7 @@ class Graph:
         self.neighbours[u].append(v)
         self.neighbours[v].append(u)
 
-    def neighbhours(self,u):
+    def neighbours(self,u):
         return self.neighbours[u]
 
     def bfs(self,source):
@@ -43,7 +43,7 @@ class Graph:
                     stack.append(v)
         return visited
     
-    def topologicalSort(self):
+    def topological_sort(self):
         Order=[]
         visited=[0]*self.n
         in_degree=[0]*self.n

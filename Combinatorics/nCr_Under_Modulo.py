@@ -10,4 +10,4 @@ def nCr(n,r):
     return ( ( factorial[n]*pow(factorial[r],mod-2,mod)*pow(factorial[n-r],mod-2,mod) )%mod )
 
 n=int(input())
-preCalculate(n)
+pre_calculate(n)

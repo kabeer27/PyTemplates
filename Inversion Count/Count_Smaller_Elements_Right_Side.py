@@ -31,7 +31,7 @@ def count_smaller_elements(arr):
     count_smaller=[0]*n
     
     for i in range(n):
-        count_smaller[i]=getSum(fenwick, temp[i]-1)
+        count_smaller[i]=get_sum(fenwick, temp[i]-1)
         update(fenwick, temp[i] , 1 ,curr_size)
     return count_smaller[::-1]
     

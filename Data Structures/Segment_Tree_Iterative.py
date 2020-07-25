@@ -8,7 +8,7 @@ class SegmentTree:
         self.pad = pad
         n = len(data)
         self.m = 1
-        while self.m < n: self.m *= 2
+        while self.m <= n: self.m *= 2
         
         self.val = [pad] * self.m + data + [pad] * (self.m-n)
         for i in range(self.m - 1, 0 , -1):

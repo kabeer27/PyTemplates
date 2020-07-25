@@ -12,7 +12,7 @@ class SegmentTree:
         
         self.val = [pad] * self.m + data + [pad] * (self.m-n)
         for i in range(self.m - 1, 0 , -1):
-            self.val[i] = min(self.val[i << 1], self.val[i << 1 + 1])
+            self.val[i] = min(self.val[i << 1], self.val[(i << 1) + 1])
             
     def get_min(self,l,r):
         l += self.m
